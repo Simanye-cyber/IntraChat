@@ -26,7 +26,10 @@ public class NetworkBackendTest {
             System.out.print("Enter Username: ");
             String username = scanner.nextLine();
 
-            Client client = new Client("localhost", 5000);
+            System.out.print("Enter Server IP: ");
+            String ip = scanner.nextLine();
+
+            Client client = new Client(ip, 5000);
             if (client.connect(username)) {
                 System.out.println("Connected! Type your messages below (or '/quit' to leave):");
 
