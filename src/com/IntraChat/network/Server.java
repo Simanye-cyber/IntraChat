@@ -41,9 +41,20 @@ private final int port;
         }
     }
 
+    // Send a message to all connected clients (group)
     public void broadcast(String message, ClientHandler sender) {
         for (ClientHandler client : clients) {
             client.sendMessage(message);
+        }
+    }
+
+    // Send a message to a specific client by username (private message)
+    public void sendMessageToUsername(String message, String username) {
+        for (ClientHandler client : clients) {
+            if (client.getUsername().equals(username)) {
+                client.sendMessage(message);
+                break;
+            }
         }
     }
 

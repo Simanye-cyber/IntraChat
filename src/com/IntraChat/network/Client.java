@@ -19,7 +19,7 @@ private final String serverIp;
         this.serverPort = serverPort;
     }
 
-    public boolean connect(String username) {
+    public boolean connect(String username, String password) { //Note: add the Code parameter and convert it back to IP
         try {
             socket = new Socket(serverIp, serverPort);
             socket.setSoTimeout(1000);
