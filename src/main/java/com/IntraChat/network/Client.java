@@ -22,7 +22,6 @@ private final String serverIp;
     public boolean connect(String username, String password) { //Note: add the Code parameter and convert it back to IP
         try {
             socket = new Socket(serverIp, serverPort);
-            socket.setSoTimeout(1000);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
             isConnected = true;
