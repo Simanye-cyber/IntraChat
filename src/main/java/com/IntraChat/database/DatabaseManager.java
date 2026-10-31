@@ -17,7 +17,7 @@ public class DatabaseManager {
         return DriverManager.getConnection(DB_URL);
     }
 
-
+    /*hgngmhn */
     public static void initializeDatabase() {
         String createUsersTable = "CREATE TABLE IF NOT EXISTS users ("
                 + " id INTEGER PRIMARY KEY AUTOINCREMENT,"
